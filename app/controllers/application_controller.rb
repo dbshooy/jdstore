@@ -23,4 +23,5 @@ class ApplicationController < ActionController::Base
     end
     session[:cart_id] = cart.id
     return cart
+  end
 end
