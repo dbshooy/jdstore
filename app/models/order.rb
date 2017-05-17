@@ -1,4 +1,5 @@
 class Order < ApplicationRecord
+  before_create :generate_token
 
   belongs_to :user
 
@@ -7,4 +8,8 @@ class Order < ApplicationRecord
   validates :shipping_name, presence: true
   validates :shipping_address, presence: true
   has_many :product_lists
+
+  def generate_token
+    self.token = SecureRandom.uuid
+  end
 end
