@@ -18,7 +18,7 @@ class OrderMailer < ApplicationMailer
   def notify_ship(order)
     @order      = order
     @user       = order.user
-    @product_list = @order.product_lists
+    @product_lists = @order.product_lists
 
     mail(to: @user.email, subject: "[JDStore] 您的订单 #{order.token}已发货")
   end
@@ -26,7 +26,7 @@ class OrderMailer < ApplicationMailer
   def notify_cancel(order)
     @order       = order
     @user        = order.user
-    @product_list = @order.product_lists
+    @product_lists = @order.product_lists
 
     mail(to: @user.email, subject: "[JDStore] 您的订单 #{order.token}已取消")
   end
