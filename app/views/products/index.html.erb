@@ -1,6 +1,35 @@
+
+<div class="container background_show">
+
+  <div class="jumbotron bg_revise">
+    <h1>玩意人生 旨在开启新的每一天</h1>
+    <p>玩意人生是一个主打为每个人提供生活指南的方案,也许四处奔波的你不曾好好地犒劳过自己的身体,不是因为你的财务没有自由,而是缺乏必要的筛选以及鉴别能力.那么此刻我们在这里等着您.</p>
+  </div>
+
+  <div class="row">
+    <div class="col-xs-12">
+
+
+      <div class="links_area">
+        <div class="btn-group btn-group-justified category_products">
+          <%= link_to("烹茶煮茶", products_path(:order => "Tea"), class: "btn btn-default") %>
+          <%= link_to("甘醇美酒", products_path(:order => "Wine"), class: "btn btn-default") %>
+          <%= link_to("时令水果", products_path(:order => "Fruit"), class: "btn btn-default") %>
+          <%= link_to("名贵药材", products_path(:order => "Product"), class: "btn btn-default") %>
+          <%= link_to("全部产品", products_path, class: "btn btn-default") %>
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+
+  <br>
+
 <div class="row">
   <% @products.each do |product| %>
-    <div class="col-xs-6 col-md-3">
+
+    <div class="col-xs-4 col-md-3 products_style">
       <%= link_to product_path(product) do %>
         <% if product.image.present? %>
           <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
@@ -8,7 +37,12 @@
           <% image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
         <% end %>
       <% end %>
-      <%= product.title %> ￥ <%= product.price %>
+      <span class="label label-danger"><%= product.category %></span>
+      <div class="product_title"><%= link_to(product.title) %><br><span>￥ <%= product.price %> </span></div>
+      <!-- <div class="product_title"><%= product.description %></div>   -->
     </div>
+
   <% end %>
+</div>
+
 </div>

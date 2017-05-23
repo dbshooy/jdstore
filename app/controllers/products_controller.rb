@@ -1,6 +1,21 @@
 class ProductsController < ApplicationController
+
+  before_action :validate_search_key, only: [:search]
+
+
   def index
-    @products = Product.all
+    @products = case params[:order]
+                when 'Tea'
+                  Product.where(category: "Tea").order('category DESC')
+                when 'Wine'
+                  Product.where(category: "Wine").order('category DESC')
+                when 'Fruit'
+                  Product.where(category: "Fruit").order('category DESC')
+                when 'Product'
+                  Product.where(category: "Product").order('category DESC')
+                else
+                  Product.all
+                end
   end
 
   def show
@@ -17,5 +32,51 @@ class ProductsController < ApplicationController
     end
     redirect_to :back
   end
+
+  # favorite part(藏宝阁)
+
+  def favorite
+    @product = Product.find(params[:id])
+    if !current_user.products.include?(@product)
+      @favorite = Favorite.new
+      @favorite.user = current_user
+      @favorite.product = @product
+      @favorite.save
+      redirect_to :back
+      flash[:notice] = "你添加了 #{@product.title}."
+    else
+      redirect_to :back
+      flash[:warning] = "你不能重复进行此操作."
+    end
+  end
+
+  def cancel_favorite
+    @user = current_user
+    @favorite = @user.favorites.find_by(product_id: params[:id])
+    @favorite.destroy
+    redirect_to :back
+  end
+
+
+
+  def search
+      if @query_string.present?
+        search_result = Product.ransack(@search_criteria).result(:distinct => true)
+        @products = search_result.paginate(:page => params[:page], :per_page => 5 )
+      end
+  end
+
+
+    protected
+
+    def validate_search_key
+      @query_string = params[:q].gsub(/\\|\'|\/|\?/, "") if params[:q].present?
+      @search_criteria = search_criteria(@query_string)
+    end
+
+
+    def search_criteria(query_string)
+      { :title_cont => query_string }
+    end
 
 end

@@ -1,0 +1,42 @@
+<div class="container">
+
+
+<% current_user.products.each do |favorite| %>
+<table class="table">
+  <thead>
+    <tr>
+      <th><i class="fa fa-bars" aria-hidden="true"></i></th>
+      <th><i class="fa fa-angle-double-down" aria-hidden="true"></i></th>
+      <th><i class="fa fa-jpy" aria-hidden="true"></i></th>
+      <th><i class="fa fa-wrench" aria-hidden="true"></i></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>
+        <%= link_to product_path(favorite) do %>
+          <%= image_tag(favorite.image.mini.url) %>
+        <% end %>
+      </td>
+      <td> <%= favorite.title %> </td>
+      <td><%= favorite.price %></td>
+      <td class="cancel_favorite">
+        <%= link_to cancel_favorite_product_path(favorite), :method => :delete  do %>
+          <i class="fa fa-times" aria-hidden="true"></i>取消收藏 | 
+        <% end %>
+
+        <% if favorite.quantity.present? && favorite.quantity > 0 %>
+          <%= link_to("加入购物车", add_to_cart_product_path(favorite), :method => :post) %>
+        <% else %>
+          已销售一空,无法购买
+        <% end %>
+
+      </td>
+    </tr>
+  </tbody>
+</table>
+
+<% end %>
+
+
+</div>

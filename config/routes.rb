@@ -14,11 +14,16 @@ Rails.application.routes.draw do
     end
   end
 
-  root 'products#index'
+  root 'welcome#index'
 
   resources :products do
     member do
       post :add_to_cart
+      post :favorite
+      delete :cancel_favorite
+    end
+    collection do
+      get :search
     end
   end
 
@@ -41,6 +46,7 @@ Rails.application.routes.draw do
 
   namespace :account do
     resources  :orders
+    resources  :favorites
   end
 
 end

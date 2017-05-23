@@ -17,3 +17,385 @@
  @import "bootstrap-sprockets";
  @import "bootstrap";
  @import "font-awesome";
+
+
+// --------banner-IMAGE------
+
+.banner-image {
+  height: 600px;
+  margin-top: -21px;
+  background-image: url("/banner_image.jpeg");
+  background-size: cover;
+  background-color: #000;
+}
+
+
+//------navbar-default--------
+
+.navbar-default {
+  background-color: #0c2340;
+  border-radius: 0;
+}
+
+#font-color a{
+  color: #000000;
+}
+
+#font-color a:hover {
+  background-color: transparent;
+}
+
+#font-color_play {
+  color: #FFF;
+}
+
+//-------dropdown-menu-li-a-----------
+
+.resetting a{
+  background-color: transparent;
+}
+
+.index_entry {
+
+  background-color: #FFF;
+
+}
+
+.index_entry li a {
+  font-size: 16px;
+  color: #FFF;
+}
+
+//---------Whyselectus----------
+
+.Whyselectus img {
+    width: 245px;
+    height: 245px;
+    border-radius: 50%;
+    text-align: center;
+    // margin-left: 27px;
+}
+
+.Whyselectus {
+
+ text-align: center;
+
+}
+
+.part-2 {
+  background: #f3f3f5;
+}
+
+.part2-text {
+  height: 200px;
+  text-align: center;
+  font-size: 36px;
+  line-height: 200px;
+}
+
+.font-define {
+  width: auto;
+  height: 80px;
+  line-height: 40px;
+  font-size: 18px;
+}
+
+//-----------part-major-----------
+
+.part-major {
+
+  // background-color: #9CCC65;
+  height: 400px;
+  margin-top: 15px;
+  // text-align: center;
+}
+
+.text_liulan {
+  height: 100px;
+  font-size: 36px;
+  text-align: center;
+  line-height: 100px;
+}
+
+.big_images1 {
+  height: 400px;
+  background-image: url("/tea.jpeg");
+  background-size: 100% 100%;
+}
+
+.big_images2 {
+  height: 400px;
+  background-image: url("/bigimages2.jpg");
+  // background-size: cover;
+}
+
+.big_images3 {
+  height: 400px;
+  background-image: url("/bigimages3.jpg");
+  // background-size: cover;
+}
+
+.big_images4 {
+  height: 400px;
+  background-image: url("/bigimages4.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  // background-size: cover;
+}
+
+
+
+.width_200 {
+  height: auto;
+}
+
+.width_200 button {
+  margin: 0 auto;
+}
+
+.btn-danger a {
+  color: #FFF;
+}
+
+.part-person {
+  height: 100px;
+  margin-top: 60px;
+  background-color: #81C784;
+  float: left;
+  width: 100%;
+}
+
+.design-style {
+  border-bottom: 5px solid #000000;
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  line-height: 100px;
+  margin: 0 auto;
+  font-size: 30px;
+}
+
+.design-style img{
+  float: left;
+}
+
+.community {
+  margin-top: 20px;
+  background-color: #FFF176;
+  text-align: center;
+}
+
+.community_images img {
+  // border-radius: 50%;
+  // width: 270px;
+  // height: 270px;
+  // text-align: center;
+  width: 350px;
+  height: 350px;
+  border-radius: 50%;
+}
+
+//--------links_area----------
+
+.links_area {
+  width: 600px;
+  height: 100px;
+  background-color: rgba(255,255,255,0.5);
+  margin: 0 auto;
+  padding-top: 30px;
+  border-radius: 15px;
+}
+
+.background_show {
+  // background-color: #80DEEA;
+  background: -webkit-linear-gradient(left top, #FFFFFF, #613854); /* For Safari 5.1 to 6.0 */
+
+}
+
+.products_style {
+  background-color: #f4f7f9;
+  line-height: 30px;
+}
+
+.product_title {
+  font-size: 18px;
+  color: #FFF;
+}
+
+.product_title a{
+  font-size: 18px;
+  color: #000;
+}
+
+.product_title a:hover{
+
+    text-decoration: none;
+}
+
+.product_title span {
+  color: #e53935;
+  font-weight: bold;
+}
+
+//--------search-id-------
+
+#search-id {
+  width: 200px;
+  margin-left: 50px;
+
+}
+
+//------import_button(搜索框)--------
+
+.import_button {
+  height: 50px;
+}
+
+.btn-default {
+  height: 50px;
+}
+
+.cart-thead  {
+  margin-left: 50px;
+}
+
+.table-bordered {
+  text-align: center;
+  line-height: 40px;
+}
+
+.table_center a {
+  font-size: 18px;
+  color: #000;
+  line-height: 120px;
+}
+
+.table_center a:hover {
+  text-decoration: none;
+  color: #FF5722;
+}
+
+.cart_clear {
+  text-decoration: none;
+}
+
+//----------product_description-------------
+
+
+.product_description {
+  font-size: 16px;
+  margin-top: 20px;
+}
+
+.product_quantity {
+  color: #D84315;
+  margin-top: 10px;
+  line-height: 25px;
+
+}
+
+.product-price {
+  font-size: 25px;
+  margin-top: 20px;
+  border-top: 2px dashed #757575;
+  line-height: 70px;
+}
+
+.cart_button {
+  margin-top: 30px;
+}
+
+
+.product_titleh2 {
+  font-weight: normal;
+}
+
+.favorite a {
+  color: #000;
+}
+
+.favorite a:hover {
+  color: #FF7043;
+  text-decoration: none;
+}
+
+//-------add_float_style location--------
+
+.cancel_favorite a {
+  color: #BDBDBD;
+}
+
+.cancel_favorite a:hover {
+  text-decoration: none;
+}
+
+.cart_anyone  {
+  width: 150px;
+  height: 64px;
+  background-image: url("/cartanyone.png");
+  background-repeat: no-repeat;
+  margin: 0 auto;
+}
+
+.add_text_decoration {
+  border-bottom: 2px solid #9E9E9E;
+  margin-bottom: 40px;
+}
+
+.cart_anyone span {
+  font-size: 25px;
+  line-height: 66px;
+  margin-left: 70px;
+}
+
+//-------clear_cart--------
+
+.clear_cart {
+  margin-bottom: 20px;
+  width: 90px;
+  height: 40px;
+  padding-top: 10px;
+  float: right;
+}
+
+.clear_cart a{
+  color: #000;
+}
+
+.clear_cart a:hover {
+  text-decoration: none;
+  color: #DD2C00;
+}
+
+// ---------bg_revise(product_top_text)--------
+.bg_revise {
+
+  background-color: rgba(255,255,255,0.4)
+}
+
+// -----category_products_link_top-----
+
+.category_products a {
+  background-color: rgba(0,0,0,0.1);
+  border-style: none;
+  border-bottom: 2px solid #613854;
+}
+
+.category_products a:hover {
+  background-color: rgba(0,0,0,0.2);
+  color: #FFF;
+  border-bottom: 2px solid #000;
+}
+
+.repository {
+  color: #FFF;
+}
+
+
+//-----------cancel_decoration--------------
+
+.cancel_decoration a:hover {
+  text-decoration: none;
+}
+
+//-------Footer_Design----------

@@ -2,43 +2,74 @@
   <div class="container-fluid">
     <!-- Brand and toggle get grouped for better mobile display -->
     <div class="navbar-header">
-      <a class="navbar-brand" href="/">JDStore</a>
+      <a class="navbar-brand" href="/"><span id="font-color_play">玩意&人生</span></a>
     </div>
+
+    <ul class="nav navbar-nav index_entry">
+      <li>
+        <%= link_to("index", products_path) %>
+      </li>
+    </ul>
+
+    <div class="nav navbar-nav navbar-left">
+    <%= form_tag search_products_path , :method => :get do %>
+      <div class="input-group" id="search-id" >
+        <input type="text" class="form-control import_button" name="q" value="<%= params[:q] %>" placeholder="搜你想搜..">
+
+        <div class="input-group-btn">
+          <button class="btn btn-default" type="submit">
+            <i class="glyphicon glyphicon-search"></i>
+          </button>
+        </div>
+
+      </div>
+    <% end %>
+    </div>
+
+
 
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active">
-          <%= link_to("Products", products_path) %>
-        </li>
-      </ul>
+
       <ul class="nav navbar-nav navbar-right">
 
+        <!-- repository implement -->
+
         <li>
+
+          <%= link_to account_favorites_path do %>
+            <span class="repository">藏宝阁 <i class="fa fa-reply" aria-hidden="true"></i>&nbsp;<span class="badge"><%= current_user.products.count %></span></span>
+          <% end %>
+
+        </li>
+
+        <li id="font-color">
           <%= link_to carts_path do %>
-            购物车 <i class="fa fa-shopping-cart"></i> ( <%= current_cart.products.count %> )
+            <span class="repository">购物车 <i class="fa fa-shopping-cart"></i>&nbsp;<span class="badge"><%= current_cart.products.count %></span></span>
           <% end %>
         </li>
 
         <% if !current_user %>
-          <li><%= link_to("注册", new_user_registration_path) %></li>
-          <li><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
+          <li id="font-color"><%= link_to("注册", new_user_registration_path) %></li>
+          <li id="font-color"><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
         <% else %>
-          <li class="dropdown">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
-              Hi!, <%= current_user.email %>
-              <b class="caret"></b>
+          <li class="dropdown"  id="font-color">
+            <a href="#" class="dropdown-toggle dropdown_background" data-toggle="dropdown">
+              <span class="repository">
+                Hi!, <%= current_user.email %>
+                <b class="caret"></b>
+              </span>
             </a>
             <ul class="dropdown-menu">
               <% if current_user.admin? %>
-                <li>
+                <li class="resetting">
                   <%= link_to("Admin 选单", admin_products_path) %>
                 </li>
               <% end %>
-              <li>
+              <li class="resetting">
                 <%= link_to("个人订单列表", account_orders_path) %>
               </li>
-              <li><%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %></li>
+              <li class="resetting"><%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %></li>
             </ul>
           </li>
         <% end %>
