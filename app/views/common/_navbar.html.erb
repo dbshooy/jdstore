@@ -36,9 +36,12 @@
         <!-- repository implement -->
 
         <li>
-
-          <%= link_to account_favorites_path do %>
-            <span class="repository">藏宝阁 <i class="fa fa-reply" aria-hidden="true"></i>&nbsp;<span class="badge"><%= current_user.products.count %></span></span>
+          <% if current_user  %>
+            <%= link_to account_favorites_path do %>
+              <span class="repository">藏宝阁 <i class="fa fa-reply" aria-hidden="true"></i>&nbsp;<span class="badge"><%= current_user.products.count %></span></span>
+            <% end %>
+          <% else %>
+            &nbsp;
           <% end %>
 
         </li>
@@ -53,7 +56,7 @@
           <li id="font-color"><%= link_to("注册", new_user_registration_path) %></li>
           <li id="font-color"><%= link_to(content_tag(:i, '登入', class: 'fa fa-sign-in'), new_user_session_path) %></li>
         <% else %>
-          <li class="dropdown"  id="font-color">
+          <li class="dropdown">
             <a href="#" class="dropdown-toggle dropdown_background" data-toggle="dropdown">
               <span class="repository">
                 Hi!, <%= current_user.email %>

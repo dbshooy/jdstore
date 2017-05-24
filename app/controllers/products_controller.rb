@@ -1,6 +1,7 @@
 class ProductsController < ApplicationController
 
   before_action :validate_search_key, only: [:search]
+  before_action :authenticate_user!, only: [:favorite]
 
 
   def index

@@ -38,7 +38,7 @@
 }
 
 #font-color a{
-  color: #000000;
+  color: #FFF;
 }
 
 #font-color a:hover {
@@ -158,21 +158,38 @@
 }
 
 .part-person {
-  height: 100px;
+  height: 150px;
   margin-top: 60px;
-  background-color: #81C784;
+  background-image: url("/pexels-photo-236287.jpeg");
   float: left;
   width: 100%;
 }
 
 .design-style {
-  border-bottom: 5px solid #000000;
   text-align: center;
   width: 200px;
   height: 100px;
   line-height: 100px;
   margin: 0 auto;
   font-size: 30px;
+  margin-top: 20px;
+}
+
+.design-style a{
+  text-align: center;
+  width: 200px;
+  height: 100px;
+  display: block;
+  font-size: 30px;
+  border: 1px solid #000;
+  color: #000;
+}
+
+.design-style a:hover {
+
+  background-color: rgba(255,255,255,0.5);
+  text-decoration: none;
+
 }
 
 .design-style img{
@@ -399,3 +416,89 @@
 }
 
 //-------Footer_Design----------
+
+.Footer_Design {
+  background: -webkit-linear-gradient(#FFFFFF, #0c2340);
+  height: 270px;
+}
+
+//--------Footer_content----------
+
+.footer_ul ul {
+  list-style: none;
+  text-align: center;
+  margin-top: 50px;
+}
+
+.footer_ul ul h4 {
+  color: #000000;
+}
+
+.footer_ul ul li {
+  height: 30px;
+  font-size: 16px;
+  color: #FFF;
+}
+
+.footer_ul ul li a{
+  height: 30px;
+  font-size: 16px;
+  color: #FFF;
+  text-align: center;
+}
+
+.footer_ul ul li a:hover {
+
+  text-decoration: none;
+  color: #373737;
+}
+
+.footer_ul {
+  text-align: right;
+}
+
+.Design_horizontal{
+  width: 80%;
+  margin: 0 auto;
+  color: #000000;
+}
+
+//------------Design_yourname------------
+
+.Design_yourname {
+  text-align: center;
+  margin-top: 20px;
+  color: #FFF;
+
+}
+
+//--------footer_column4------------
+
+#footer_column4 {
+  text-align: left;
+}
+
+#footer_column4 h2 img{
+  border-radius: 50%;
+
+
+}
+
+//-------LogDown--------
+
+.LogDown {
+  color: #000000;
+}
+
+//--------registrations_newnew---------
+
+.registrations_newnew {
+  background: -webkit-linear-gradient(#FFFFFF, #0c2340);
+}
+
+.pull-center {
+  width: 100px;
+  height: 50px;
+  margin: 0 auto;
+  font-size: 20px;
+}
