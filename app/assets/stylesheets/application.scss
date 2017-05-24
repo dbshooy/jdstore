@@ -24,7 +24,7 @@
 .banner-image {
   height: 600px;
   margin-top: -21px;
-  background-image: url("/banner_image.jpeg");
+  background:image-url('/banner_image.jpeg');
   background-size: cover;
   background-color: #000;
 }
@@ -119,25 +119,25 @@
 
 .big_images1 {
   height: 400px;
-  background-image: url("/tea.jpeg");
+  background:image-url('/tea.jpeg');
   background-size: 100% 100%;
 }
 
 .big_images2 {
   height: 400px;
-  background-image: url("/bigimages2.jpg");
+  background:image-url('/bigimages2.jpg')
   // background-size: cover;
 }
 
 .big_images3 {
   height: 400px;
-  background-image: url("/bigimages3.jpg");
+  background:image-url('/bigimages3.jpg');
   // background-size: cover;
 }
 
 .big_images4 {
   height: 400px;
-  background-image: url("/bigimages4.jpeg");
+  background:image-url('/bigimages4.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
   // background-size: cover;
@@ -160,7 +160,7 @@
 .part-person {
   height: 150px;
   margin-top: 60px;
-  background-image: url("/pexels-photo-236287.jpeg");
+  background:image-url('/pexels-photo-236287.jpeg');
   float: left;
   width: 100%;
 }
@@ -349,7 +349,7 @@
 .cart_anyone  {
   width: 150px;
   height: 64px;
-  background-image: url("/cartanyone.png");
+  background:image-url('/cartanyone.png'); 
   background-repeat: no-repeat;
   margin: 0 auto;
 }
