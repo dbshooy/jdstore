@@ -62,11 +62,6 @@ class ProductsController < ApplicationController
   # GET user add information
 
 
-
-
-
-
-
   def search
       if @query_string.present?
         search_result = Product.ransack(@search_criteria).result(:distinct => true)
