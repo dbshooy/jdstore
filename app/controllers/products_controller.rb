@@ -21,6 +21,7 @@ class ProductsController < ApplicationController
 
   def show
     @product = Product.find(params[:id])
+    @messages = @product.messages
   end
 
   def add_to_cart
@@ -57,6 +58,12 @@ class ProductsController < ApplicationController
     @favorite.destroy
     redirect_to :back
   end
+
+  # GET user add information
+
+
+
+
 
 
 

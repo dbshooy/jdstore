@@ -1,0 +1,12 @@
+<h1>留言区</h1>
+
+
+<%= simple_form_for [@product,@content] do |f| %>
+
+<div class="group">
+  <%= f.input :content %>
+</div>
+
+<%= f.submit "发送到评论去~", data: { disable_with: "Submitting..." } %>
+
+<% end %>

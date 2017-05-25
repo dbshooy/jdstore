@@ -25,6 +25,7 @@ Rails.application.routes.draw do
     collection do
       get :search
     end
+    resources :messages
   end
 
   resources :carts do
@@ -48,5 +49,7 @@ Rails.application.routes.draw do
     resources  :orders
     resources  :favorites
   end
+
+
 
 end
