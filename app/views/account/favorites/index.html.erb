@@ -18,11 +18,12 @@
           <%= image_tag(favorite.image.mini.url) %>
         <% end %>
       </td>
-      <td> <%= favorite.title %> </td>
-      <td><%= favorite.price %></td>
+      <td><br><br><%= favorite.title %> </td>
+      <td><br><br><%= favorite.price %></td>
       <td class="cancel_favorite">
         <%= link_to cancel_favorite_product_path(favorite), :method => :delete  do %>
-          <i class="fa fa-times" aria-hidden="true"></i>取消收藏 | 
+        <br><br>
+          <i class="fa fa-times" aria-hidden="true"></i>取消收藏 |
         <% end %>
 
         <% if favorite.quantity.present? && favorite.quantity > 0 %>

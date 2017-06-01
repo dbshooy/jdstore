@@ -7,15 +7,15 @@ class ProductsController < ApplicationController
   def index
     @products = case params[:order]
                 when 'Tea'
-                  Product.where(category: "Tea").order('category DESC')
+                  Product.where(category: "Tea").recent.paginate(:page => params[:page], :per_page => 2)
                 when 'Wine'
-                  Product.where(category: "Wine").order('category DESC')
+                  Product.where(category: "Wine").recent.paginate(:page => params[:page], :per_page => 2)
                 when 'Fruit'
-                  Product.where(category: "Fruit").order('category DESC')
+                  Product.where(category: "Fruit").recent.paginate(:page => params[:page], :per_page => 2)
                 when 'Product'
-                  Product.where(category: "Product").order('category DESC')
+                  Product.where(category: "Product").recent.paginate(:page => params[:page], :per_page => 2)
                 else
-                  Product.all
+                  Product.all.recent.paginate(:page => params[:page], :per_page => 2)
                 end
   end
 

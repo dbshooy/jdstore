@@ -5,25 +5,26 @@
       <a class="navbar-brand" href="/"><span id="font-color_play">玩意&人生</span></a>
     </div>
 
+
     <ul class="nav navbar-nav index_entry">
       <li>
-        <%= link_to("index", products_path) %>
+        <%= link_to("贮藏仓库", products_path) %>
       </li>
     </ul>
 
     <div class="nav navbar-nav navbar-left">
-    <%= form_tag search_products_path , :method => :get do %>
-      <div class="input-group" id="search-id" >
-        <input type="text" class="form-control import_button" name="q" value="<%= params[:q] %>" placeholder="搜你想搜..">
+      <%= form_tag search_products_path , :method => :get do %>
+        <div class="input-group" id="search-id" >
+          <input type="text" class="form-control import_button" name="q" value="<%= params[:q] %>" placeholder="商品名称..类别">
 
-        <div class="input-group-btn">
-          <button class="btn btn-default" type="submit">
-            <i class="glyphicon glyphicon-search"></i>
-          </button>
+          <div class="input-group-btn">
+            <button class="btn btn-default set_height" type="submit">
+              <i class="glyphicon glyphicon-search"></i>
+            </button>
+          </div>
+
         </div>
-
-      </div>
-    <% end %>
+      <% end %>
     </div>
 
 
@@ -41,7 +42,9 @@
               <span class="repository">藏宝阁 <i class="fa fa-reply" aria-hidden="true"></i>&nbsp;<span class="badge"><%= current_user.products.count %></span></span>
             <% end %>
           <% else %>
-            &nbsp;
+            <%= link_to account_favorites_path do %>
+              <span class="repository">藏宝阁 <i class="fa fa-reply" aria-hidden="true"></i></span>
+            <% end %>
           <% end %>
 
         </li>

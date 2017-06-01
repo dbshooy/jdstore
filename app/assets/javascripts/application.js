@@ -14,5 +14,28 @@
 //= require jquery_ujs
 //= require turbolinks
 //= require bootstrap/alert
+//= require bootstrap/button
 //= require bootstrap/dropdown
+//= require bootstrap/scrollspy
+//= require bootstrap/tab
+//= require bootstrap/tooltip
+//= require bootstrap/transition
+//= require bootstrap/collapse
+//= require bootstrap/popover
+//= require bootstrap/carousel
 //= require_tree .
+
+$(function () {
+  $('[data-toggle="tooltip"]').tooltip()
+})
+
+$(function () {
+  $('[data-toggle="popover"]').popover()
+})
+
+$('#myButton').on('click', function () {
+  var $btn = $(this).button('loading')
+  // business logic...
+  $btn.button('reset')
+})
+//

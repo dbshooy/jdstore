@@ -19,22 +19,13 @@
  @import "font-awesome";
 
 
-// --------banner-IMAGE------
-
-.banner-image {
-  height: 600px;
-  margin-top: -21px;
-  background:image-url('/banner_image.jpeg');
-  background-size: cover;
-  background-color: #000;
-}
-
-
 //------navbar-default--------
 
 .navbar-default {
-  background-color: #0c2340;
+  background-color: rgba(#000, 0.9);
   border-radius: 0;
+  border: 0;
+  width: 100%;
 }
 
 #font-color a{
@@ -55,12 +46,6 @@
   background-color: transparent;
 }
 
-.index_entry {
-
-  background-color: #FFF;
-
-}
-
 .index_entry li a {
   font-size: 16px;
   color: #FFF;
@@ -74,6 +59,7 @@
     border-radius: 50%;
     text-align: center;
     // margin-left: 27px;
+
 }
 
 .Whyselectus {
@@ -120,19 +106,22 @@
 .big_images1 {
   height: 400px;
   background:image-url('/tea.jpeg');
-  background-size: 100% 100%;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .big_images2 {
   height: 400px;
-  background:image-url('/bigimages2.jpg')
-  // background-size: cover;
+  background:image-url('/bigimages2.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .big_images3 {
   height: 400px;
   background:image-url('/bigimages3.jpg');
-  // background-size: cover;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 
 .big_images4 {
@@ -140,17 +129,12 @@
   background:image-url('/bigimages4.jpeg');
   background-repeat: no-repeat;
   background-size: cover;
-  // background-size: cover;
 }
 
 
 
 .width_200 {
   height: auto;
-}
-
-.width_200 button {
-  margin: 0 auto;
 }
 
 .btn-danger a {
@@ -168,27 +152,30 @@
 .design-style {
   text-align: center;
   width: 200px;
-  height: 100px;
-  line-height: 100px;
+  height: 70px;
   margin: 0 auto;
-  font-size: 30px;
-  margin-top: 20px;
+  font-size: 20px;
+  margin-top: 40px;
 }
 
 .design-style a{
   text-align: center;
   width: 200px;
-  height: 100px;
+  height: 70px;
   display: block;
-  font-size: 30px;
-  border: 1px solid #000;
+  font-size: 20px;
+  line-height: 70px;
+  border: 3px solid #81ceff;
   color: #000;
+  border-radius: 15px;
 }
 
 .design-style a:hover {
 
-  background-color: rgba(255,255,255,0.5);
+  background-color: rgba(#76daff,0.8);
   text-decoration: none;
+  border-color: #FFF;
+  border-radius: 15px;
 
 }
 
@@ -258,18 +245,32 @@
 
 #search-id {
   width: 200px;
-  margin-left: 50px;
+  margin-left:100px;
+  height: 35px;
+  margin-top: 7px;
 
 }
+
+//-----------set_height----------
+
+#search-id input:focus {
+
+  box-shadow: none;
+  border-style: none;
+  border: 0;
+
+}
+
+
 
 //------import_button(搜索框)--------
 
 .import_button {
-  height: 50px;
+  height: 35px;
 }
 
-.btn-default {
-  height: 50px;
+.set_height {
+  height: 35px;
 }
 
 .cart-thead  {
@@ -314,7 +315,7 @@
 .product-price {
   font-size: 25px;
   margin-top: 20px;
-  border-top: 2px dashed #757575;
+  border-top: 2px solid #000;
   line-height: 70px;
 }
 
@@ -325,6 +326,7 @@
 
 .product_titleh2 {
   font-weight: normal;
+  line-height: 30px;
 }
 
 .favorite a {
@@ -349,7 +351,7 @@
 .cart_anyone  {
   width: 150px;
   height: 64px;
-  background:image-url('/cartanyone.png'); 
+  background:image-url('/cartanyone.png');
   background-repeat: no-repeat;
   margin: 0 auto;
 }
@@ -406,8 +408,13 @@
 
 .repository {
   color: #FFF;
+
 }
 
+.dropdown a span:focus {
+  background-color: #000;
+
+}
 
 //-----------cancel_decoration--------------
 
@@ -418,7 +425,8 @@
 //-------Footer_Design----------
 
 .Footer_Design {
-  background: -webkit-linear-gradient(#FFFFFF, #0c2340);
+  // background: -webkit-linear-gradient(#FFFFFF, #0c2340);
+  background-color: #000;
   height: 270px;
 }
 
@@ -431,7 +439,7 @@
 }
 
 .footer_ul ul h4 {
-  color: #000000;
+  color: #FFF;
 }
 
 .footer_ul ul li {
@@ -472,17 +480,6 @@
 
 }
 
-//--------footer_column4------------
-
-#footer_column4 {
-  text-align: left;
-}
-
-#footer_column4 h2 img{
-  border-radius: 50%;
-
-
-}
 
 //-------LogDown--------
 
@@ -493,7 +490,11 @@
 //--------registrations_newnew---------
 
 .registrations_newnew {
-  background: -webkit-linear-gradient(#FFFFFF, #0c2340);
+  background-image: url("/sign_up.jpeg");
+  margin-top: -20px;
+}
+.form-actionss {
+  margin: 0 auto;
 }
 
 .pull-center {
@@ -501,4 +502,97 @@
   height: 50px;
   margin: 0 auto;
   font-size: 20px;
+  color: #FFF;
+  margin-top: 40px;
+}
+
+// ---------label_html: { class: 'my_class' }----------
+
+
+.my_class {
+  color: #FFF;
+}
+
+.label_quantity {
+  color: #FFF;
+}
+
+
+// -----------will_paginate_style--------------
+
+.pagination-bg li a {
+  background-color: #ff4c4c;
+  border: none;
+}
+
+
+
+// ----------input_email------------
+
+.input_email {
+  border: 1px solid #000;
+  height: 35px;
+}
+.input_email:focus {
+  border: 1px solid #555;
+  resize: none;
+  box-shadow: none;
+}
+
+//-------input_remember---------
+
+.input_remember {
+  font-size: 16px;
+  line-height: 19px;
+}
+
+//-----------registrations_sign_up-------------
+
+.registrations_sign_up {
+  padding: 10px;
+  background-color: rgba(0,0,0,0.3);
+  color: #FFF;
+  font-size: 16px;
+}
+
+.registrations_sign_up label{
+  padding: 10px;
+  color: #FFF;
+  font-weight: normal;
+  font-size: 16px;
+}
+
+//---------share_links------------
+
+.share_links {
+  float: right;
+}
+
+//------------ index_entry-------------
+
+.index_entry>li>a {
+  background-color: #000;
+  color: #FFF !important;
+  width: 100px;
+}
+
+.index_entry>li>a:hover {
+  background-color: #000 !important;
+  color: #FFF !important;
+}
+
+.index_carousel {
+  margin-top: -21px;
+}
+
+//------------Design slogan product_description
+
+.slogan {
+  margin-bottom: 25%;
+}
+
+//-----------Defined description_songti ------------------
+
+.description_songti {
+  font-family: '宋体';
 }

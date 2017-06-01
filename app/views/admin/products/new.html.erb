@@ -3,28 +3,28 @@
 <%= simple_form_for [:admin, @product] do |f| %>
 
   <div class="group">
-    <%= f.input :title %>
+    <%= f.input :title, label: '产品标题', label_html: { class: 'my_class' }, hint: 'No special characters.' %>
   </div>
 
   <div class="group">
-    <%= f.input :description %>
+    <%= f.input :description, label: '添加描述信息', hint: 'You cannot change your username.' %>
   </div>
 
   <div class="group">
-    <%= f.input :quantity %>
+    <%= f.input :quantity, hint: '库存数量', label: '库存数量', label_html: { class: 'label_quantity' }  %>
   </div>
 
   <div class="group">
-    <%= f.input :price %>
+    <%= f.input :price, label: '售卖价格', placeholder: 'user@domain.com'  %>
   </div>
 
   <div class="group">
-    <%= f.input :category %>
+    <%= f.input :category, label: '所属分类', placeholder: 'Tea Wine Fruit Product' %>
   </div>
 
   <div class="group">
-    <%= f.input :image, as: :file %>
+    <%= f.input :image, as: :file, label: '上传图片' %>
   </div>
 
-  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+  <%= f.submit "确认添加", data: { disable_with: "Submitting..." } %>
 <% end %>

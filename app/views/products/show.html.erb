@@ -1,40 +1,55 @@
 <div class="container">
 
-<!-- 商品内容页面包屑导航 -->
-<!-- <div class="row">
+  <div>
 
-  <div class="col-xs-1">
-      <%= link_to("烹茶煮茶", products_path(:order => "Tea") ) %>
+    <!-- Nav tabs -->
+    <!-- <ul class="nav nav-pills" role="tablist">
+      <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
+      <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
+      <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
+      <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
+    </ul> -->
+
+    <!-- Tab panes -->
+    <!-- <div class="tab-content">
+      <div role="tabpanel" class="tab-pane fade in active" id="home">图片1</div>
+      <div role="tabpanel" class="tab-pane fade" id="profile">图片2</div>
+      <div role="tabpanel" class="tab-pane fade" id="messages">图片3</div>
+      <div role="tabpanel" class="tab-pane fade" id="settings">图片4</div>
+    </div> -->
+
   </div>
 
-  <div class="col-xs-1">
-      <%= link_to("烹茶煮茶", products_path(:order => "Tea") ) %>
-  </div>
+  <!-- <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
 
-  <div class="col-xs-1">
-      <%= link_to("烹茶煮茶", products_path(:order => "Tea") ) %>
-  </div>
+  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
 
-  <div class="col-xs-1">
-      <%= link_to("烹茶煮茶", products_path(:order => "Tea") ) %>
-  </div>
+  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
 
-</div> -->
-<br>
+  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
+
+  <br>
+  <br>
+  <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
+  <br>
+
+  <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a> -->
+
+
 
 
 <div class="row">
-  <div class="col-md-8">
+  <div class="col-md-5">
     <% if @product.image.present? %>
       <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
     <% else %>
       <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
     <% end %>
   </div>
-  <div class="col-md-4">
+  <div class="col-md-7">
     <h2 class="product_titleh2"> <%= @product.title %> </h2>
     <div style="height: 100px;" class="product_description">
-      <p>
+      <p class="description_songti">
         <%= @product.description %>
       </p>
 
@@ -68,37 +83,50 @@
   </div>
 </div>
 
-<div class="row">
-
-<div class="col-xs-10 col-xs-offset-1">
 
 
-  <h4>用户评论区:</h4>
+<a class="btn btn-info" role="button" data-toggle="collapse" href="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  客户留言：）
+</a>
+<!-- <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+  关闭评论
+</button> -->
+<div class="collapse in" id="collapseExample">
+  <div class="row">
+    <div class="col-xs-10 col-xs-offset-1">
 
+      <h4>用户评论区:</h4>
 
+        <table class="table">
+          <thead>
+           <tr>
+              <th>评论内容</th>
+              <th>发表者</th>
+              <th>发表时间</th>
+            </tr>
+          </thead>
+          <tbody>
+            <% @messages.each do |message| %>
+              <tr>
+                <td><%= message.content %></td>
+                <td><%= message.user.email %></td>
+                <td><%= message.created_at %></td>
+              </tr>
+            <% end %>
+          </tbody>
+        </table>
 
-    <table class="table">
-      <thead>
-       <tr>
-          <th>评论内容</th>
-          <th>发表者</th>
-          <th>发表时间</th>
-        </tr>
-      </thead>
-      <tbody>
-        <% @messages.each do |message| %>
-          <tr>
-            <td><%= message.content %></td>
-            <td><%= message.user.email %></td>
-            <td><%= message.created_at %></td>
-          </tr>
+        <% if @messages.count == 0 %>
+          <p class="lead">此处还没有评论,快来留言吧~</p>
         <% end %>
-      </tbody>
-    </table>
+
+        <%= link_to("我来说两句~", new_product_message_path(@product), class: "btn btn-warning btn-sm")  %>
+
+    </div>
 
 
+  </div>
 </div>
-  <%= link_to("我来说两句~", new_product_message_path(@product), class: "btn btn-danger bt-lg")  %>
-</div>
+
 
 </div>
