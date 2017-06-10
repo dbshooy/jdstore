@@ -1,4 +1,7 @@
 <!-- carousel plugin -->
+<div class="row">
+
+
 <div id="carousel-example-generic" class="carousel slide index_carousel" data-ride="carousel">
   <!-- Indicators -->
   <ol class="carousel-indicators">
@@ -19,7 +22,7 @@
     </div>
 
     <div class="item">
-      <img src="/carrousel2.jpeg" alt="...">
+      <img src="/carrousel_new.jpeg" alt="...">
       <div class="carousel-caption slogan">
         <h1>千里之行，始于足下</h1>
         <p class="lead">路漫漫，其修远兮</p>
@@ -47,9 +50,9 @@
   </a>
 </div>
 
-
-
 </div>
+
+
 
 <div class="row part-2">
 
@@ -97,7 +100,8 @@
       <footer>From WWF's website</footer>
     </blockquote>
 
-    <button type="button" class="btn btn-danger btn-block"><span class="cancel_decoration"><%= link_to("烹茶煮茶", products_path(:order => "Tea") ) %></span></button>
+    <span class="cancel_decoration"><%= link_to("烹茶煮茶", products_path(:order => "Tea"), class: "btn btn-danger btn-block" ) %></span>
+
 
   </div>
 
@@ -123,8 +127,7 @@
       <footer>From WWF's website</footer>
     </blockquote>
 
-    <button type="button" class="btn btn-danger btn-block"><span class="cancel_decoration"><%= link_to("甘醇美酒", products_path(:order => "Wine") ) %></span></button>
-
+    <span class="cancel_decoration"><%= link_to("甘醇美酒", products_path(:order => "Wine"), class: "btn btn-danger btn-block" ) %></span>
 
 
   </div>
@@ -151,8 +154,7 @@
       <footer>From WWF's website</footer>
     </blockquote>
 
-    <button type="button" class="btn btn-danger btn-block"><span class="cancel_decoration"><%= link_to("时令水果", products_path(:order => "Fruit") ) %></span></button>
-
+    <span class="cancel_decoration"><%= link_to("时令水果", products_path(:order => "Fruit"), class: "btn btn-danger btn-block" ) %></span>
   </div>
 
   <div class="col-xs-8 big_images3">
@@ -177,8 +179,7 @@
       <footer>From WWF's website</footer>
     </blockquote>
 
-    <button type="button" class="btn btn-danger btn-block"><span class="cancel_decoration"><%= link_to("名贵药材", products_path(:order => "Product") ) %></span></button>
-
+    <span class="cancel_decoration"><%= link_to("名贵药材", products_path(:order => "Product"), class: "btn btn-danger btn-block" ) %></span>
   </div>
 
   <div class="col-xs-8 big_images4 col-xs-pull-4">

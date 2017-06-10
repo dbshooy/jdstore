@@ -9,4 +9,5 @@ module CartsHelper
     # sum
     cart.total_price
   end
+
 end

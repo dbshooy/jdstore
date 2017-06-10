@@ -33,6 +33,7 @@ class ProductsController < ApplicationController
       flash[:warning] = "你的购物车内已有此物品"
     end
     redirect_to :back
+
   end
 
   # favorite part(藏宝阁)

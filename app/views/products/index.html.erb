@@ -32,7 +32,7 @@
     <div class="col-xs-4 col-md-3 products_style">
       <%= link_to product_path(product) do %>
         <% if product.image.present? %>
-          <%= image_tag(product.image.thumb.url, class: "thumbnail") %>
+          <%= image_tag(product.image.thumb.url, class: "thumbnail  hoverEffect") %>
         <% else %>
           <% image_tag("http://placehold.it/200x200&text=No Pic", class: "thumbnail") %>
         <% end %>
@@ -52,3 +52,23 @@
   </div>
 
 </div>
+
+<!--
+<script type="text/javascript">
+
+$(document).ready(function(){
+    $(".hoverEffect").hover(function(){
+        $(".classfadeOut").fadeIn(2000);
+        $(".classfadeOut").text("本店位于南美的西班牙地区,地处沿海地带,当地属于亚热带气候,适宜农作物的发展.");
+        $(".classfadeOut").css({"background-color": "yellow", "font-size": "200%"});
+
+    },
+
+    function(){
+      $(".classfadeOut").fadeOut(2000);
+
+    });
+});
+
+</script>
+-->

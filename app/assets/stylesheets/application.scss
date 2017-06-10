@@ -19,14 +19,19 @@
  @import "font-awesome";
 
 
+
+ @import url('https://fonts.googleapis.com/earlyaccess/notosanssc.css');   //引入google思源黑简在线字体 需要使用VPN才可生效
+
+
+
 //------navbar-default--------
 
 .navbar-default {
   background-color: rgba(#000, 0.9);
   border-radius: 0;
   border: 0;
-  width: 100%;
 }
+
 
 #font-color a{
   color: #FFF;
@@ -46,10 +51,6 @@
   background-color: transparent;
 }
 
-.index_entry li a {
-  font-size: 16px;
-  color: #FFF;
-}
 
 //---------Whyselectus----------
 
@@ -212,7 +213,7 @@
 
 .background_show {
   // background-color: #80DEEA;
-  background: -webkit-linear-gradient(left top, #FFFFFF, #613854); /* For Safari 5.1 to 6.0 */
+  background: -webkit-linear-gradient(left bottom, #FFFFFF, #81ceff); /* For Safari 5.1 to 6.0 */
 
 }
 
@@ -261,7 +262,13 @@
 
 }
 
+#search-id input {
 
+  box-shadow: none;
+  border-style: none;
+  border: 0;
+
+}
 
 //------import_button(搜索框)--------
 
@@ -271,6 +278,8 @@
 
 .set_height {
   height: 35px;
+  border: 0;
+  border-radius: 3px;
 }
 
 .cart-thead  {
@@ -350,21 +359,23 @@
 
 .cart_anyone  {
   width: 150px;
-  height: 64px;
-  background:image-url('/cartanyone.png');
+  height: 42px;
+  background:image-url('/cartProduct.png');
   background-repeat: no-repeat;
   margin: 0 auto;
 }
 
 .add_text_decoration {
-  border-bottom: 2px solid #9E9E9E;
+  border-bottom: 1px solid #2f6f7e;
   margin-bottom: 40px;
+  padding-bottom: 10px;
 }
 
 .cart_anyone span {
-  font-size: 25px;
-  line-height: 66px;
-  margin-left: 70px;
+  font-size: 21px;
+  line-height: 48px;
+  margin-left: 50px;
+  color: #2f6f7e;
 }
 
 //-------clear_cart--------
@@ -458,7 +469,7 @@
 .footer_ul ul li a:hover {
 
   text-decoration: none;
-  color: #373737;
+  color: #00a98f;
 }
 
 .footer_ul {
@@ -570,19 +581,33 @@
 
 //------------ index_entry-------------
 
-.index_entry>li>a {
-  background-color: #000;
-  color: #FFF !important;
-  width: 100px;
+.index_entry {
+  width: 130px;
+  float: left;
+  height: 50px;
+  line-height: 50px;
+  font-size:17px;
+
 }
 
-.index_entry>li>a:hover {
-  background-color: #000 !important;
-  color: #FFF !important;
+.index_entry a {
+ text-decoration: none;
+ width: 130px;
+ height: 50px;
+ display: block;
+ background-color: #7acef4;
+ color: #fff;
+ text-align: center;
+ border-radius: 2px;
+
 }
 
+.index_entry a:hover {
+  background-color: #3db4e7;
+}
 .index_carousel {
   margin-top: -21px;
+  background-color: #fd5c63;
 }
 
 //------------Design slogan product_description
@@ -595,4 +620,58 @@
 
 .description_songti {
   font-family: '宋体';
+}
+
+// ------------item > image --------------
+
+.item img {
+  max-width: 100%;
+}
+
+// -------hoverEffect-----------
+
+.hoverEffect11 {
+  width: 220px;
+  height: 220px;
+}
+
+// --------design_style----------
+
+.design_style {
+  color: #FFF;
+}
+
+//-------footerBottomText
+
+.copyRight {
+  text-align: center;
+  color: #fff;
+  line-height: 55px;
+}
+
+.cartRight {
+//  border: 2px solid #000;
+  background-color: rgba(#81ceff, 0.4);
+  color: #2f6f7e;
+  font-size: 16px;
+  font-weight: normal;
+}
+
+// --------购物车detail样式化----------
+
+.detail {
+  height: 50px;
+  text-align: center;
+  line-height: 50px;
+}
+
+.cartItemDetail {
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid #000;
+  margin-bottom: 2px;
+}
+
+.cartItemName a {
+  color: #000;
 }

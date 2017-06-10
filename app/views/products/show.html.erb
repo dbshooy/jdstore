@@ -1,58 +1,20 @@
 <div class="container">
 
-  <div>
-
-    <!-- Nav tabs -->
-    <!-- <ul class="nav nav-pills" role="tablist">
-      <li role="presentation" class="active"><a href="#home" aria-controls="home" role="tab" data-toggle="tab">Home</a></li>
-      <li role="presentation"><a href="#profile" aria-controls="profile" role="tab" data-toggle="tab">Profile</a></li>
-      <li role="presentation"><a href="#messages" aria-controls="messages" role="tab" data-toggle="tab">Messages</a></li>
-      <li role="presentation"><a href="#settings" aria-controls="settings" role="tab" data-toggle="tab">Settings</a></li>
-    </ul> -->
-
-    <!-- Tab panes -->
-    <!-- <div class="tab-content">
-      <div role="tabpanel" class="tab-pane fade in active" id="home">图片1</div>
-      <div role="tabpanel" class="tab-pane fade" id="profile">图片2</div>
-      <div role="tabpanel" class="tab-pane fade" id="messages">图片3</div>
-      <div role="tabpanel" class="tab-pane fade" id="settings">图片4</div>
-    </div> -->
-
-  </div>
-
-  <!-- <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</button>
-
-  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</button>
-
-  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</button>
-
-  <button type="button" class="btn btn-default" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</button>
-
-  <br>
-  <br>
-  <button type="button" class="btn btn-lg btn-danger" data-toggle="popover" title="Popover title" data-content="And here's some amazing content. It's very engaging. Right?">Click to toggle popover</button>
-  <br>
-
-  <a tabindex="0" class="btn btn-lg btn-danger" role="button" data-toggle="popover" data-trigger="focus" title="Dismissible popover" data-content="And here's some amazing content. It's very engaging. Right?">Dismissible popover</a> -->
-
-
-
-
 <div class="row">
   <div class="col-md-5">
     <% if @product.image.present? %>
-      <%= image_tag(@product.image.medium.url, class: "thumbnail") %>
+      <%= image_tag(@product.image.medium.url, class: "thumbnail changeTransformation") %>
     <% else %>
       <%= image_tag("http://placehold.it/400x400&text=No Pic", class: "thumbnail") %>
     <% end %>
   </div>
+
   <div class="col-md-7">
     <h2 class="product_titleh2"> <%= @product.title %> </h2>
-    <div style="height: 100px;" class="product_description">
+    <div style="height: 100px;" class="product_description" id="productFadeIn">
       <p class="description_songti">
         <%= @product.description %>
       </p>
-
     </div>
     <br>
     <div class="product_quantity"> 储备数量 : <%= @product.quantity %> </div>
@@ -60,18 +22,11 @@
 
     <div class="favorite">
 
-
         <%= link_to favorite_product_path(@product), :method => :post  do %>
           <i class="fa fa-heart" aria-hidden="true"></i>收藏此商品
         <% end %>
 
-
-
     </div>
-
-
-
-
 
     <div class="cart_button">
       <% if @product.quantity.present? && @product.quantity > 0 %>
@@ -127,6 +82,5 @@
 
   </div>
 </div>
-
 
 </div>
