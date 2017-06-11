@@ -166,16 +166,17 @@
   display: block;
   font-size: 20px;
   line-height: 70px;
-  border: 3px solid #81ceff;
+  border: 3px solid #6dc067;
   color: #000;
   border-radius: 15px;
+  background-color: rgba(#6dc067,0.4);
 }
 
 .design-style a:hover {
 
-  background-color: rgba(#76daff,0.8);
+  background-color: rgba(#6dc067,0.6);
   text-decoration: none;
-  border-color: #FFF;
+  border-color: #6dc067;
   border-radius: 15px;
 
 }
@@ -419,7 +420,15 @@
 
 .repository {
   color: #FFF;
+  height: 45px !important;
 
+}
+
+// --------imgCirclePadding-----------
+
+.imgCirclePadding {
+  margin-top: -20px;
+  margin-bottom: -20px;
 }
 
 .dropdown a span:focus {

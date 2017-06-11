@@ -65,7 +65,11 @@
           <li class="dropdown">
             <a href="#" class="dropdown-toggle dropdown_background" data-toggle="dropdown">
               <span class="repository">
-                Hi!, <%= current_user.email %>
+                <% if current_user.user_image.present? %>
+                  <%= image_tag(current_user.user_image.extraSmall.url, class: 'img-circle imgCirclePadding') %>
+                <% else %>
+                  Hi!, <%= current_user.email %>
+                <% end %>
                 <b class="caret"></b>
               </span>
             </a>
@@ -78,6 +82,7 @@
               <li class="resetting">
                 <%= link_to("个人订单列表", account_orders_path) %>
               </li>
+              <li><%= link_to('修改个人资料', edit_user_path) %></li>
               <li class="resetting"><%= link_to(content_tag(:i, '登出', class: 'fa fa-sign-out'), destroy_user_session_path, method: :delete) %></li>
             </ul>
           </li>

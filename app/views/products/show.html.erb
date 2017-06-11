@@ -55,16 +55,20 @@
         <table class="table">
           <thead>
            <tr>
-              <th>评论内容</th>
               <th>发表者</th>
+              <th>评论内容</th>
               <th>发表时间</th>
             </tr>
           </thead>
           <tbody>
             <% @messages.each do |message| %>
-              <tr>
+              <tr>        
+                <% if message.user.user_image.present? %>
+                  <td><%= image_tag(message.user.user_image.extraSmall.url, class: 'img-circle') %></td>
+                <% else %>
+                  <td><%= message.user.email %></td>
+                <% end %>
                 <td><%= message.content %></td>
-                <td><%= message.user.email %></td>
                 <td><%= message.created_at %></td>
               </tr>
             <% end %>

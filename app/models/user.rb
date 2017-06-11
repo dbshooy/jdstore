@@ -14,4 +14,6 @@ class User < ApplicationRecord
 
 
   has_many :messages
+
+  mount_uploader :user_image, ImageUploader 
 end

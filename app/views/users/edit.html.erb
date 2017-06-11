@@ -1,0 +1,14 @@
+<h4> Edit User </h4>
+
+<%= simple_form_for @user do |f| %>
+
+
+  <div class="group">
+    <%= f.input :user_image, as: :file %>
+  </div>
+
+
+
+  <%= f.submit "Submit", data: { disable_with: "Submitting..." } %>
+
+<% end %>

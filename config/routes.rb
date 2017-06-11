@@ -50,6 +50,8 @@ Rails.application.routes.draw do
     resources  :favorites
   end
 
+  resource :user
+
 
 
 end
